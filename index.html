@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="js/audio.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/chrono.js" defer></script>
+    <script src="js/snap.js" defer></script>
+    <title>Memory Game by Daniel Kamdem Sadefo</title>
+</head>
+
+<body id="page">
+
+<!--bar nav coté gauche-->
+
+<figure>
+    <audio id="audioplay"
+        controls
+        src="audio/play.ogg">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+    <audio id="click"
+        controls
+        src="audio/click.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+    <audio id="rejoue" 
+        controls
+        src="audio/rejoue.ogg">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+    <audio id="good" 
+        controls
+        src="audio/good.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+
+</figure>
+
+    <nav id="barreMenu">
+        <div class="sidenav">
+            <img id="fourm" src="img/SSP_Memory_game_Farm_Animals-4.jpeg" alt="Draw of an Anteater">
+            <div class="btn">
+                <label id="regles" for="show" class="show-btn">Règles du jeu <br> <br>Retrouvez les paires <br>d'images identiques.<br><br>
+                    </label>
+            </div>
+            
+            <select class="theme" id="selectedTheme" name="selectedTheme">
+                <option value="animals">Homme</option>
+                <option value="animals">Femme</option>
+                
+            </select>
+            <div class="btn">
+                <button  class="plays" id="play" onclick="play()"><b id="start"></b>Commencer une Nouvelle partie</button>
+            </div>
+        </div>
+    </nav>
+
+    <!--Fenêtre pop-up-->
+
+    
+
+<!--haut de page logo-->
+
+    <header>
+        
+        <img id="logoMemory" src="img/kisspng-logo-brand-font-memory-game-5b3dfe539c0306.850961571530789459639-removebg-preview.png" alt="logo du memory">
+    </header>
+    
+<!--centre de la page-->
+
+    <main>
+
+        <div class="cardContainer">
+
+            <div id="cardGrid"></div>
+
+        </div>
+
+        
+        
+    </main>
+<!--bas de page-->
+    <section id="playing">
+        <p id="Chrono"><b id="output">0:00:00:00</b></p>
+        <button  id="reset" onclick="reset()"><b id="reset1"></b>Rejouer</button>
+    </section>
+    
+    <footer>
+        <p>Concepteur: <a target="_blank" href="https://www.linkedin.com/in/daniel-kamdem-sadefo/">Daniel Kamdem Sadefo</a> <br>
+        
+    </footer>
+
+</body>
+</html>
